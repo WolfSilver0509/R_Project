@@ -51,3 +51,72 @@ str(data)
 
 # derniére verification valeur manquantes aprés traitements
 apply(data, 2, anyNA)
+
+#---------------------------------------------------
+
+#Indicateur clés ( variable qualitative)
+
+table(data$sex) # effectifs
+
+prop.table(table(data$sex)) # fréquence 
+
+round(prop.table(table(data$sex)) , 4) # fréquence arrondis 
+
+round(prop.table(table(data$sex)) , 4)*100 # pourcentages
+
+# Variable cp
+table(data$cp)
+round(prop.table(table(data$cp)), 4)*100
+
+# Variable fbs
+table(data$fbs)
+round(prop.table(table(data$fbs)), 4)*100
+
+# Variable restecg
+table(data$restecg)
+round(prop.table(table(data$restecg)), 4)*100
+
+# Variable exang
+table(data$exang)
+round(prop.table(table(data$exang)), 4)*100
+
+# Variable slope
+table(data$slope)
+round(prop.table(table(data$slope)), 4)*100
+
+# Variable ca
+table(data$ca)
+round(prop.table(table(data$ca)), 4)*100
+
+# Variable thal
+table(data$thal)
+round(prop.table(table(data$thal)), 4)*100
+
+# Variable target
+table(data$target)
+round(prop.table(table(data$target)), 4)*100
+
+# --------------------
+
+#Indicateur clés ( variable quantitative)
+
+## Minimum, quartiles, mediane, moyenne et maximum
+summary(data$age)
+summary(data$trestdps)
+summary(data$chol)
+summary(data$thalach)
+summary(data$oldpeak)
+
+# Variance et écarts-type
+var(data$age) # Variance
+sd(data$age) # ecarts-type 
+var(data$trestdps)
+sd(data$trestdps)
+var(data$chol)
+sd(data$chol)
+var(data$thalach)
+sd(data$thalach)
+var(data$oldpeak)
+sd(data$oldpeak)
+
+#----------------------
